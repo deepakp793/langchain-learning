@@ -1,0 +1,16 @@
+{
+    "name": null,
+    "input_variables": [
+        "chat_history",
+        "chat_input"
+    ],
+    "optional_variables": [],
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": "Answer the question of this query '{chat_input}' but keep words minimum so not much tokens get spend on this.\n    refer below chat history:\n    '{chat_history}'\n",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
