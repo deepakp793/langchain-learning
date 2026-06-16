@@ -6,17 +6,26 @@ load_dotenv()
 
 model = ChatOpenAI()
 
+
+# schema
 class Review(TypedDict):
-    key_theme : Annotated[list[str], "All the key theme of product"]
-    summary : Annotated[str,"A brief summary of review"]
-    rating : Annotated['int', "Overall rating of product based on review.Rate product between 1 to 10"]
-    pros: Annotated[Optional[list[str]],"Write the pros inside list if abailable"]
-    cons: Annotated[Optional[list[str]],"Write the cons inside list if abailable"]
-    name: Annotated[Optional[str],"Set the name only if reveiwer real human name explicitly available."]
+    key_theme: Annotated[list[str], "All the key theme of product"]
+    summary: Annotated[str, "A brief summary of review"]
+    rating: Annotated[
+        "int", "Overall rating of product based on review.Rate product between 1 to 10"
+    ]
+    pros: Annotated[Optional[list[str]], "Write the pros inside list if abailable"]
+    cons: Annotated[Optional[list[str]], "Write the cons inside list if abailable"]
+    name: Annotated[
+        Optional[str],
+        "Set the name only if reveiwer real human name explicitly available.",
+    ]
+
 
 structured_model = model.with_structured_output(Review)
 
-result = structured_model.invoke("""This is first amkette product purchase and I am fully satisfied with the product . I am using the keyboard for around 10 days
+result = structured_model.invoke(
+    """This is first amkette product purchase and I am fully satisfied with the product . I am using the keyboard for around 10 days
 
 
 Design and Build (4/5) : Good color option and steady plastic build
@@ -33,8 +42,8 @@ Connectivity (3.5/5) : The connectivity is good but experienced Bluetooth connec
 
 Weight and Size (4/5) : Lightweight and compact suitable for travelling .
 
-The compact size may be an issue for people who are frequently using full size keyboard initially they can prefer the full size one . The issue is not with the device it's all about the choice""")
+The compact size may be an issue for people who are frequently using full size keyboard initially they can prefer the full size one . The issue is not with the device it's all about the choice"""
+)
 
 print(result.keys())
-print(result['name'])
-
+print(result["name"])
