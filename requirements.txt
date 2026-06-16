@@ -1,4 +1,9 @@
 langchain
 langchain-openai
 python-dotenv
-pydantic
+pydantic[email]
+streamlit
+langchain_google_genai
+langchain_huggingface
+transformers
+torch
