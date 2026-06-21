@@ -17,7 +17,7 @@ class Feedback(BaseModel):
 pydantic_parser = PydanticOutputParser(pydantic_object=Feedback)
 
 prompt1 = PromptTemplate(
-    template= 'Classify the sentiment of the following feedback /n {feedback} \n{format_instruction}',
+    template= 'Classify the sentiment of the following feedback \n {feedback} \n {format_instruction}',
     input_variables=['Feedback'],
     partial_variables= {'format_instruction':pydantic_parser.get_format_instructions()}
 )
