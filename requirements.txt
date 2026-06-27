@@ -10,3 +10,4 @@ torch
 langchain-community
 langchain-core
 grandalf
+pypdf
