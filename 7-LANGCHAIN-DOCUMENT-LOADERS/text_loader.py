@@ -8,7 +8,7 @@ load_dotenv()
 
 model = ChatOpenAI()
 
-loader = TextLoader('LANGCHAIN-DOCUMENT-LOADERS/poem.txt')
+loader = TextLoader('7-LANGCHAIN-DOCUMENT-LOADERS/poem.txt')
 
 doc = loader.load()
 

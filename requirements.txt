@@ -11,3 +11,5 @@ langchain-community
 langchain-core
 grandalf
 pypdf
+langchain-text-splitters
+langchain_experimental
