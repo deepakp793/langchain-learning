@@ -6,10 +6,13 @@ streamlit
 langchain_google_genai
 langchain_huggingface
 transformers
-torch
 langchain-community
 langchain-core
 grandalf
 pypdf
 langchain-text-splitters
 langchain_experimental
+chromadb
+tiktoken
+openai
+langchain-chroma>=0.1.2
