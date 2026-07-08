@@ -19,3 +19,4 @@ langchain-chroma>=0.1.2
 wikipedia
 faiss-cpu
 langchain_classic
+youtube-transcript-api
