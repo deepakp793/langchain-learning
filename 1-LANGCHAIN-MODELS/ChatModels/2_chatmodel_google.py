@@ -8,3 +8,4 @@ model = ChatGoogleGenerativeAI(model= 'gemini-2.5-flash')
 result = model.invoke("what is the capital of india")
 
 print(result.content)
+print(type(result.content))
